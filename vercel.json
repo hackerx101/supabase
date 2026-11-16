@@ -1,0 +1,79 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "design-system": {
+      "root": "apps/design-system",
+      "framework": "nextjs"
+    },
+    "docs": {
+      "root": "apps/docs",
+      "framework": "nextjs"
+    },
+    "kb": {
+      "root": "apps/kb",
+      "framework": "astro"
+    },
+    "learn": {
+      "root": "apps/learn",
+      "framework": "nextjs"
+    },
+    "lite-studio": {
+      "root": "apps/lite-studio",
+      "framework": "react-router"
+    },
+    "studio": {
+      "root": "apps/studio",
+      "framework": "nextjs"
+    },
+    "ui-library": {
+      "root": "apps/ui-library",
+      "framework": "nextjs"
+    },
+    "www": {
+      "root": "apps/www",
+      "framework": "nextjs"
+    },
+    "vue": {
+      "root": "blocks/vue",
+      "framework": "nuxtjs"
+    },
+    "ai-commands": {
+      "root": "packages/ai-commands",
+      "framework": "vite"
+    },
+    "common": {
+      "root": "packages/common",
+      "framework": "vite"
+    },
+    "dev-tools": {
+      "root": "packages/dev-tools",
+      "framework": "nextjs"
+    },
+    "pg-meta": {
+      "root": "packages/pg-meta",
+      "framework": "vite"
+    },
+    "ui": {
+      "root": "packages/ui",
+      "framework": "vite"
+    },
+    "ui-patterns": {
+      "root": "packages/ui-patterns",
+      "framework": "vite"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/docs/(.*)",
+      "destination": {
+        "service": "docs"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "www"
+      }
+    }
+  ]
+}
